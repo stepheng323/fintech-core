@@ -25,7 +25,9 @@
 ### The Api request and response structure has been captured using postman
 
 - API-DOCS - https://documenter.getpostman.com/view/7771727/UzBgtpAh
-- API-BASEURL - http:localhost:4000/api/v1
+- API-BASEURL - http://localhost:4000/api/v1
+
+
 
 
 
