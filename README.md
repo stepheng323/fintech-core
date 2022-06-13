@@ -17,7 +17,7 @@
 - Clone this repo
 - Cd into fintech-core
 - install nodejs and npm if you dont have them already on your machine
-- install create a mysql database and add the connection string to the .env file
+- create a mysql database and add the connection string to the .env file
 - run "npm install" to install project dependencies
 - run "npm run migration" to migrate schema against the database
 - finally, start the server with "npm run dev"
@@ -26,7 +26,7 @@
 
 - A webhook is used to receive funding events from paystack, the webhook url should be given to paystack via your paystack's dashboard.
 - The webhook endpoint is ${baseUrl}/api/v1/webhooks/paystack
-- For testing, ngrok was used to expose the localhost to the internet.
+- For testing, Ngrok was used to expose the localhost to the internet.
 
 # Documentations
 
