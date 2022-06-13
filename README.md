@@ -24,9 +24,9 @@
 
 # Webhook
 
-- a webhook is used to receive funding events from paystack, the webhook url should be given to paystack via your paystack's dashboard.
-- the webhook endpoint is ${baseUrl}/api/v1/webhooks/paystack
-- for testing, ngrok was used to expose the localhost to the internet.
+- A webhook is used to receive funding events from paystack, the webhook url should be given to paystack via your paystack's dashboard.
+- The webhook endpoint is ${baseUrl}/api/v1/webhooks/paystack
+- For testing, ngrok was used to expose the localhost to the internet.
 
 # Documentations
 
