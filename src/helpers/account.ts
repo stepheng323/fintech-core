@@ -40,7 +40,11 @@ export async function creditAccount({
 export async function debitAccount({
   amount, accountId, purpose, reference, metadata, t,
 }) {
-  const account = await Models.Account.findOne({ where: { id: accountId } });
+  const account = await Models.Account.findOne({
+    where: { id: accountId },
+    transaction: t,
+    lock: true,
+  });
 
   if (!account) {
     return {
