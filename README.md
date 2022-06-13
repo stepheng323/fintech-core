@@ -1,5 +1,7 @@
 # fintech-core
+
 ---
+
 # Setup Dotenv
 
 #### A .env file is used to store configuration files especialy about development and testing.
@@ -12,13 +14,19 @@
 
 # Installation Guide
 
-- Clone this repo 
+- Clone this repo
 - Cd into fintech-core
 - install nodejs and npm if you dont have them already on your machine
-- install create a mysql database and add the connection string to the .env file 
-- run "npm install"  to install project dependencies
+- install create a mysql database and add the connection string to the .env file
+- run "npm install" to install project dependencies
 - run "npm run migration" to migrate schema against the database
 - finally, start the server with "npm run dev"
+
+# Webhook
+
+- a webhook is used to receive funding events from paystack, the webhook url should be given to paystack via your paystack's dashboard.
+- the webhook endpoint is ${baseUrl}/api/v1/webhooks/paystack
+- for testing, ngrok was used to expose the localhost to the internet.
 
 # Documentations
 
@@ -26,18 +34,3 @@
 
 - API-DOCS - https://documenter.getpostman.com/view/7771727/UzBgtpAh
 - API-BASEURL - http://localhost:4000/api/v1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
