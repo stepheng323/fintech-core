@@ -108,7 +108,7 @@ export const fundAccount = catchAsync(async function (req: Request, res: Respons
   const { email, id: userId } = req.auth;
   const { amount } = req.body;
   const result = await initializePaystackPayment({
-    email, amountInNaira: amount, metaData: { userId }, callbackUrl: ''
+    email, amountInNaira: amount, metaData: { userId },
   });
   const { data, message } = result;
   return respondWithSuccess(res, 200, message, data.authorization_url)

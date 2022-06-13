@@ -4,14 +4,9 @@ import { PAYSTACK_SECRET_KEY } from '../config/env';
 
 const token = `Bearer ${PAYSTACK_SECRET_KEY}`;
 
-export interface Data {
-  message: string;
-  data: any;
-}
-
 export const initializePaystackPayment = async ({
-  email, amountInNaira, metaData, callbackUrl,
-}): Promise<any> => {
+  email, amountInNaira, metaData,
+}: { email: string, amountInNaira: number, metaData: any }): Promise<any> => {
   const url = 'https://api.paystack.co/transaction/initialize';
   const request = await fetch(url, {
     method: 'POST',
@@ -23,7 +18,7 @@ export const initializePaystackPayment = async ({
       reference: uuid(),
       email,
       amount: Number(amountInNaira) * 100,
-      callback_url: callbackUrl,
+      callback_url: '',
       metadata: {
         custom_fields: [
           {

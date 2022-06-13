@@ -18,7 +18,7 @@ export const onEmittReversal = () => {
       if (!transaction) return console.log('No transaction found');
 
       const {
-        status, amount, userId, accountId,
+        status, amount, accountId,
       } = transaction;
       if (status !== 'failed') return console.log('trying to reverse a transaction that didnt fail');
 
@@ -28,7 +28,6 @@ export const onEmittReversal = () => {
       });
       if (!fundingResponse?.success) throw new Error('Funding error, reversal failed');
       await t.commit();
-      return console.log('reversal successful');
     } catch (error) {
       console.log(error);
       await t.rollback();

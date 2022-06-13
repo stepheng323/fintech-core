@@ -21,7 +21,7 @@ user.post('/beneficiary', checkAuth, validateAddBeneficiary, addBeneficiary);
 user.get('/beneficiaries', checkAuth, getBeneficiaries);
 
 user.post('/fund-transfer', checkAuth, validateTransfer, transferFund);
-user.post('/fund-account/:id', checkAuth, validateAccountFunding, fundAccount)
+user.post('/fund-account', checkAuth, validateAccountFunding, fundAccount)
 
 
 
